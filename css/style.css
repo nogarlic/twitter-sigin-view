@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    /*background-color: rgba(163, 81, 81, 0.329);*/
+    background: rgba(0, 0, 0, 0.973);
+}
+
+#abuabu{
+    background: #5b708366;
+}
+
+.main-header {
+    display: flex;
+}
+
+.body-box {
+    float: right;
+    margin-left: 300px;
+}
+
+.body-box .logo-title {
+    color: #d9d9d9;
+    padding-top: 70px;
+}
+
+.title h1{
+    font-size: 64px;
+    font-weight: 2500;
+    padding-top: 70px;
+}
+
+.title p{
+    font-size: 34px;
+    font-weight: 1500;
+    padding-top: 50px;
+}
+
+.open-twitter {
+    width: 334px;
+}
+
+.login-box {
+    padding-top: 30px;
+}
+
+.email-signup button{
+    background-color: white;
+    margin: 10px;
+    border-radius: 50px;
+    font-size: 15px;
+}
+
+.email-signup .google button{
+    padding: 10px 61px;
+}
+
+.email-signup .apple button{
+    padding: 10px 68px;
+}
+
+.email-signup .google button:hover{
+    background-color: rgba(217, 255, 252, 0.973);
+}
+
+.email-signup .apple button:hover{
+    background-color: rgba(196, 212, 211, 0.973);
+}
+
+.brdr h6{
+    font-size: 15px;
+    color: #d9d9d9;
+    margin-top: 10px;
+}
+
+
+.brdr h6::after,
+.brdr h6::before{
+    content: " ";
+    height: 0.2px;
+    width: 7.6vw;
+    background: #dddddd;
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+    transform: translateY(-4px);
+}
+
+.open-twitter .login-box .phone-signup {
+    padding-top: 10px;
+    color: #d9d9d9;
+}
+
+.open-twitter .login-box .phone-signup button{
+    background-color: #1d9bf0;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+
+.open-twitter .login-box .phone-signup button:hover{
+    background-color: #1d9cf0c9;
+}
+
+.open-twitter .login-box .phone-signup p{
+    font-size: 10px;
+}
+
+p span{
+    color: #1d9bf0;
+    cursor: pointer;
+}
+
+p span:hover{
+    text-decoration: underline;
+}
+
+
+.signin-box{
+    color: #d9d9d9;
+    padding-top: 60px;
+    font-size: 17px;
+}
+
+.signin-box button{
+    background-color: transparent;
+    color: #1d9bf0;
+    padding: 10px 128px;
+    margin-top: 24px;
+    border-radius: 50px;
+    font-size: 15px;
+    border-color: #d9d9d9;
+    border-width: 0.5px;
+}
+
+.signin-box button:hover{
+    background-color: #2096e411;
+}
+
+.footbar{
+    align-items: center;
+}
+
+footer .footbar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.footbar ul li a{
+    text-decoration: none;
+    color: #d9d9d959;
+    font-size: 13px;
+}
+
+.footbar ul li a:hover{
+    text-decoration: underline;
+}
+
+.main-site{
+    transition: all 0.1s ease;
+}
+
+/*Sign-up account area*/
+.sign-up,
+.signup-step2,
+.signup-step3,
+.verify-phone,
+.sign-in{
+    color: #d9d9d9;
+    width: 650px;
+    height: 740px;
+    margin: 24px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.973);
+    border-radius: 22px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.sign-up.activeSignup,
+.signup-step2.activeSignup-2,
+.signup-step3.activeSignup-3,
+.verify-phone.activeVerify,
+.sign-in.activeSignIn{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 5;
+}
+
+.main-site.activeMain{
+    opacity: 0.6;
+    filter: blur(5px);
+}
+
+.main-site.activePlain{
+    opacity: 0.1;
+    filter: blur(50px);
+}
+
+.signup-step3.activeBlurSignup-3{
+    filter: blur(8px);
+}
+
+.sign-up .logo-signup .twit{
+    margin-left: 291px;
+    margin-bottom: 34px;
+    padding-top: 12px;
+}
+
+.sign-up .logo-signup .close{
+    padding-left: 34px;
+    cursor: pointer;
+}
+
+.sign-up .logo-signup .close:hover{
+    filter: brightness(1.4);
+}
+
+input[type=text] {
+    width: 95%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    border: 2px solid rgb(70, 70, 70);
+    border-radius: 6px;
+    background-color: transparent;
+    color: white;
+}
+
+.sign-up .create,
+.sign-up .birth,
+.nxt-button{
+    margin: 40px;
+}
+
+.sign-up .create h2{
+    padding-bottom: 34px;
+}
+
+.sign-up .create p{
+    color: #1d9bf0;
+    font-size: 15px;
+    cursor: pointer;
+    padding-top: 34px;
+}
+
+.sign-up .create p:hover{
+    text-decoration: underline;
+}
+
+.sign-up .birth h2{
+    font-size: 17px;
+    padding-bottom: 6px;
+}
+
+.sign-up .birth p{
+    font-size: 14px;
+    font-weight: 50;
+    padding-bottom: 24px;
+}
+
+.sign-up .birth .birth-button{
+    display: inline-flex;
+}
+
+.sign-up .birth .birth-button .select-month,
+.sign-up .birth .birth-button .select-day,
+.sign-up .birth .birth-button .select-year{
+    border: 1px solid #d9d9d92f;
+    border-radius: 6px;
+    font-size: 10px;
+    padding-bottom: 8px;
+    margin-right: 12px;
+}
+
+.sign-up .birth .birth-button .select-month select{
+    margin-right: 219px;
+}
+
+.sign-up .birth .birth-button .select-day select,
+.sign-up .birth .birth-button .select-year select{
+    margin-right: 105px;
+}
+
+select {
+    width: 90%;
+    margin-left: 10px;
+}
+
+.sign-up .birth .birth-button .select-month:hover,
+.sign-up .birth .birth-button .select-day:hover,
+.sign-up .birth .birth-button .select-year:hover{
+    color: #1d9bf0;
+    border: 1px solid #1d9bf0;
+}
+
+.sign-up .birth .birth-button .select-month p,
+.sign-up .birth .birth-button .select-day p,
+.sign-up .birth .birth-button .select-year p{
+    margin-top: 8px;
+    margin-left: 9px;
+    padding-bottom: 3px;
+}
+
+.sign-up .birth .birth-button .select-month .month,
+.sign-up .birth .birth-button .select-day .day,
+.sign-up .birth .birth-button .select-year .year{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    margin-top: 12px;
+    font-size: 17px;
+}
+
+.sign-up .birth .birth-button .select-month .month option,
+.sign-up .birth .birth-button .select-day .day option,
+.sign-up .birth .birth-button .select-year .year option{
+    background-color: rgba(0, 0, 0, 0.973);
+    padding: 5px;
+    font-size: 17px;
+}
+
+.nxt-button button{
+    background-color: rgb(226, 226, 226);
+    border-radius: 60px;
+    padding: 10px 255px;
+}
+
+.sign-up .nxt-button{
+    margin-top: 99px;
+}
+
+.nxt-button{
+    margin-top: 34px;
+}
+
+.nxt-button:hover{
+    filter: brightness(1.1);
+}
+
+.back{
+    cursor: pointer;
+}
+
+.back:hover{
+    filter: brightness(1.5);
+}
+
+.header-step{
+    display: flex;
+    padding-left: 17px;
+    padding-top: 20px;
+}
+
+.header-step p{
+    margin-left: 54px;
+    font-size: 20px;
+    transform: translateY(-7px);
+}
+
+.main-para,
+.signup-step3 h1{
+    margin-left: 45px;
+    margin-right: 45px;
+    padding-top: 20px;
+}
+
+.main-para h1{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.main-para h4{
+    font-size: 17px;
+    font-weight: 550;
+    padding-top: 48px;
+    padding-bottom: 17px;
+}
+
+.agreement{
+    display: flex;
+    margin-bottom: 46px;
+}
+
+.agreement .statement{
+    font-weight: 400;
+    width: 90%;
+    font-size: 13px;
+}
+
+.main-para .by-sign p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.signup-step2 .nxt-button{
+    margin-top: 350px;
+}
+
+.by-sign span{
+    font-weight: 500;
+}
+
+.signup-step3 h1{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.account-data input{
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    padding: 0;
+    font-size: 15px;
+}
+
+.account-data p{
+    margin-left: 10px;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.account-data .account-name,
+.account-data .account-phone,
+.account-data .account-birth{
+    border: 1px solid rgba(245, 245, 245, 0.158);
+    border-radius: 8px;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 30px;
+}
+
+.signup-step3 .by-sign{
+    margin: 45px;
+    font-size: 14px;
+}
+
+.signup-step3 .nxt-button{
+    margin-top: 130px;
+}
+
+.verify-phone{
+    width: 300px;
+    height: 230px;
+    border-radius: 10px;
+}
+
+.verify-phone h1{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.verify-phone p{
+    font-size: 15px;
+    padding-left: 20px;
+    padding-top: 12px;
+    font-weight: 300;
+}
+
+.verify-button{
+    padding-top: 23px;
+    padding-left: 23px;
+}
+
+.ok,
+.edit{
+    padding: 6px 113px;
+    background-color:  #d9d9d9;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.ok:hover{
+    filter: brightness(1.4);
+}
+
+.edit{
+    padding: 6px 110px;
+    background-color: transparent;
+    border: 1px solid rgba(245, 245, 245, 0.329);
+    color: #d9d9d9;
+}
+
+.edit:hover{
+    background-color: #1d9cf042;
+}
+
+/*SIGN IN BOX*/
+
+.sign-in .main{
+    color: #d9d9d9;
+    padding-left: 180px;
+}
+
+.sign-in .header{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.sign-in .header .twit{
+    padding-left: 260px;
+}
+
+.sign-in .title{
+    padding-top: 15px;
+}
+
+.sign-in .title p{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.sign-in .email-signup{
+    padding-top: 24px;
+}
+
+.sign-in .bottom{
+    padding-top: 18px;
+}
+
+.sign-in .bottom input{
+    width: 285px;
+    height: 20px;
+    font-size: 15px;
+}
+
+.sign-in .bottom .signup-button-box .next{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sign-in .bottom .signup-button-box .next button{
+    background-color: #f3efef;
+    color: #000000f8;
+}
+
+.sign-in .bottom .signup-button-box .next button:hover{
+    background-color: #d9d9d9;
+}
+
+.sign-in .bottom .signup-button-box button{
+    color: #d9d9d9;
+    width: 311px;
+    height: 42px;
+    background-color: #000000f8;
+    border-radius: 22px;
+    font-size: 16px;
+}
+
+.sign-in .bottom .signup-button-box button:hover{
+    background-color: #24232379;
+}
+
+.sign-in p{
+    font-weight: 100;
+    padding-top: 40px;
+}
+
+.close,
+button{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
